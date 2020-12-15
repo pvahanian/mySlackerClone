@@ -18,20 +18,20 @@ const firestore = fireApp.firestore();
 const useStyles = makeStyles((theme) => ({
     button: {
         margin: theme.spacing(1),
-        display:'flex',
-        alignItems:'right',
-        flexDirection:'row-reverse',
         width: "7%"
       },
   paper: {
     display: 'flex',
+    flexDirection:"row",
+    justifyContent:'flex-start',
     border: `1px solid ${theme.palette.divider}`,
     flexWrap: 'wrap',
   },
   root: {
     "& .MuiTextField-root": {
+      display:'flex',
       margin: theme.spacing(.5),
-      width: "40%"
+      width: "43%"
     }
   }
 }));
