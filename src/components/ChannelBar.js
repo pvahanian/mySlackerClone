@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -56,21 +56,21 @@ const ChannelBar = () => {
   const [open, setOpen] = useState(false);
   const [channels, setChannels] = useState()
   const channelsRef = firestore.collection('channels')
-  let [holder, setHolder]= useState([])
-  let mapOfChannels=[]
+  let [holder]= useState([])
+  // let mapOfChannels=[]
  
   
-useEffect(() =>{
-const collection= firestore
-.collection('channels')
-.onSnapshot((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-      mapOfChannels.push(doc.id)
-    })
-    setHolder= holder.push(Object.values(mapOfChannels))
-})
+// useEffect(() =>{
+// const collection= firestore
+// .collection('channels')
+// .onSnapshot((querySnapshot) => {
+//   querySnapshot.forEach((doc) => {
+//       mapOfChannels.push(doc.id)
+//     })
+//     setHolder= holder.push(Object.values(mapOfChannels))
+// })
 
-},[])
+// },[])
 
   // useEffect(() => { 
   //   const unsubscribe = someFirestoreAPICall().onSnapshot(snap => {
