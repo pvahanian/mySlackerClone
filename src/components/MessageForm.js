@@ -18,7 +18,7 @@ const firestore = fireApp.firestore();
 const useStyles = makeStyles((theme) => ({
     button: {
         margin: theme.spacing(1),
-        width: "7%"
+        width: "6%"
       },
   paper: {
     display: 'flex',
